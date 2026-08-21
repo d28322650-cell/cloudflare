@@ -1,0 +1,21 @@
+
+/* Centered Romana signature gateway */
+.romana-signature-gateway {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.romana-signature-gateway:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(79, 10, 22, 0.08);
+}
+
+@media (max-width: 640px) {
+  .romana-signature-gateway {
+    gap: 0.55rem;
+    padding: 0.85rem 0.45rem;
+  }
+
+  .romana-signature-gateway .gatewayOrnament {
+    display: none;
+  }
+}

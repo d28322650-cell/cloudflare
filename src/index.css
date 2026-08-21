@@ -1,0 +1,157 @@
+/* src/index.css */
+
+:root {
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f7efe7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: #0f0b08;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: 100%;
+  overflow: hidden;
+}
+
+.page-hero {
+  min-height: auto !important;
+}
+
+.page-hero-content {
+  max-width: 100% !important;
+}
+
+.page-hero-content h1,
+.page-hero-content h2 {
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+}
+
+.page-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-content-section {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.page-card {
+  padding: 1.25rem !important;
+}
+
+.page-toolbar {
+  gap: 0.75rem !important;
+}
+
+.page-toolbar button,
+.page-toolbar select {
+  width: 100%;
+}
+
+.page-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+}
+
+.page-contact {
+  grid-template-columns: 1fr !important;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .page-content-section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 3rem 1.25rem 2.25rem !important;
+  }
+
+  .page-hero-content {
+    padding: 1.5rem !important;
+  }
+
+  .page-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-hero-buttons a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .page-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .page-card {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .page-content-section {
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+  }
+
+  .page-hero {
+    padding: 2.5rem 0.9rem 1.75rem !important;
+  }
+
+  .page-hero-content {
+    padding: 1.15rem !important;
+  }
+}
+
