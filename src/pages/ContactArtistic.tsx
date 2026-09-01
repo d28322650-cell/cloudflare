@@ -186,7 +186,7 @@ export default function Contact() {
               {status === 'sending' ? 'Sending…' : 'Send message'}
               <span style={buttonArrow}>↗</span>
             </button>
-            {status === 'sent' && <span style={{ ...statusMessage, color: '#b7e7c6' }}>Message sent — thank you!</span>}
+            {status === 'sent' && <span style={{ ...statusMessage, color: '#7b464d' }}>Message sent — thank you!</span>}
             {status === 'error' && <span style={{ ...statusMessage, color: '#ffb3b3' }}>Failed to send — please try again later.</span>}
           </div>
         </form>

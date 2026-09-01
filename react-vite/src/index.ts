@@ -323,7 +323,7 @@ export default {
             // IMPORTANT:
             // Replace this with an email address from
             // a domain verified in your Resend account.
-            from: "Romana Website <d28322650@gmail.com>",
+            from: "onboarding@resend.dev",
 
             // Where YOU receive contact form messages.
             to: ["d28322650@gmail.com"],
