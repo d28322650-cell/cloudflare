@@ -1,5 +1,4 @@
 import { useState, type CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import aboutImage from '../assets/usable/oval like figures.jpg';
 import { sendContactEmail } from '../api/sendEmail';
@@ -352,35 +351,9 @@ const buttonRow: CSSProperties = {
   gap: '1rem',
 };
 
-const primaryButton: CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '.45rem',
-  padding: '1rem 1.55rem',
-  borderRadius: 4,
-  background: 'linear-gradient(135deg, #690617 0%, #80091d 56%, #9c1d35 100%)',
-  color: '#fff9f3',
-  textDecoration: 'none',
-  fontWeight: 800,
-  letterSpacing: '.01em',
-  boxShadow: '0 18px 35px rgba(79,10,22,.16), inset 0 1px rgba(255,255,255,.14)',
-  transition: 'transform .25s ease, box-shadow .25s ease',
-};
 
-const secondaryButton: CSSProperties = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '1rem 1.55rem',
-  borderRadius: 4,
-  border: '1px solid rgba(128,9,29,.24)',
-  color: '#5a0a17',
-  textDecoration: 'none',
-  background: 'rgba(255,251,247,.68)',
-  backdropFilter: 'blur(12px)',
-  boxShadow: '0 12px 28px rgba(79,10,22,.055)',
-};
+
+
 
 const buttonArrow: CSSProperties = {
   fontSize: '1rem',

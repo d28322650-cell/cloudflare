@@ -1,29 +1,27 @@
-import emailjs from '@emailjs/browser';
-
-type ContactPayload = {
+interface ContactFormData {
   name: string;
   email: string;
   subject: string;
   message: string;
-};
+}
 
-export async function sendContactEmail(payload: ContactPayload) {
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+export async function sendContactEmail(formData: ContactFormData): Promise<any> {
+  // Replace this URL with your deployed Cloudflare Worker URL
+  const WORKER_URL = import.meta.env.VITE_WORKER_URL || 'http://localhost:8787';
 
-  if (!serviceId || !templateId || !publicKey) {
-    throw new Error('Email service not configured. Set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY.');
+  const response = await fetch(WORKER_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  });
+
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error(result.error || 'Failed to send message.');
   }
 
-  const templateParams = {
-    from_name: payload.name,
-    from_email: payload.email,
-    reply_to: payload.email,
-    subject: `${payload.subject} — from ${payload.name} <${payload.email}>`,
-    message: payload.message,
-    to_email: 'play4store7@gmail.com',
-  };
-
-  return emailjs.send(serviceId, templateId, templateParams, publicKey);
+  return result;
 }

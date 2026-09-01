@@ -799,9 +799,7 @@ const materialDiamond: CSSProperties = {
   border: `1px solid ${colors.burgundy}`,
 };
 
-const materialNoteStrong: CSSProperties = {
-  display: 'block',
-};
+
 
 const atelierSection: CSSProperties = {
   padding: '0 6% 8rem',

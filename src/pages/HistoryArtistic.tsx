@@ -11,18 +11,18 @@ export default function History() {
       <div style={pageMosaic} aria-hidden="true" />
       <div style={pageGlow} aria-hidden="true" />
 
-      <section style={heroSection}>
+      <section style={heroSection} className="history-hero-section">
         <div style={heroFrame} aria-hidden="true">
           <span />
           <span />
           <span />
           <span />
         </div>
-        <div style={heroMedallion} aria-hidden="true">
+        <div style={heroMedallion} className="history-hero-medallion" aria-hidden="true">
           <div />
           <span>AFRICA</span>
         </div>
-        <div style={heroMosaic} aria-hidden="true">
+        <div style={heroMosaic} className="history-hero-mosaic" aria-hidden="true">
           {Array.from({ length: 36 }, (_, index) => (
             <span
               key={index}
@@ -38,64 +38,64 @@ export default function History() {
           ))}
         </div>
 
-        <div style={heroContent}>
-          <div style={heroKickerRow}>
+        <div style={heroContent} className="history-hero-content">
+          <div style={heroKickerRow} className="history-hero-kicker-row">
             <span style={heroKicker}>ROMANA</span>
-            <span style={heroKickerLine} />
-            <span style={heroKickerSecondary}>TUNISIA • MOSAIC</span>
+            <span style={heroKickerLine} className="history-hero-kicker-line" />
+            <span style={heroKickerSecondary} className="history-hero-kicker-secondary">TUNISIA • MOSAIC</span>
           </div>
 
-          <h1 style={title}>
+          <h1 style={title} className="history-hero-title">
             A history written
             <br />
             <em>in stone and colour.</em>
           </h1>
 
-          <p style={description}>
+          <p style={description} className="history-hero-description">
             In Tunisia, mosaic is more than decoration. It is a record of
             ancient life, belief, wealth, craft, and exchange — a visual
             language carried across Punic, Hellenistic, Roman, and Byzantine
             worlds.
           </p>
 
-          <div style={heroSignature}>
+          <div style={heroSignature} className="history-hero-signature">
             <span style={signatureMark}>✦</span>
             <span>CRAFT • CULTURE • MEMORY</span>
           </div>
         </div>
 
-        <div style={heroSideNote} aria-hidden="true">
+        <div style={heroSideNote} className="history-hero-side-note" aria-hidden="true">
           <span>MOSAIC / TUNISIA</span>
           <span style={sideNoteLine} />
           <span>ROMAN AFRICA</span>
         </div>
       </section>
 
-      <section style={introBand}>
-        <div style={introOrnament} aria-hidden="true">
+      <section style={introBand} className="history-intro-band">
+        <div style={introOrnament} className="history-intro-ornament" aria-hidden="true">
           <span />
           <span />
           <span />
         </div>
 
-        <p style={introText}>
+        <p style={introText} className="history-intro-text">
           Every tessera is small, but together they preserve an entire
           civilisation. Tunisia became one of the great centres of Roman
           mosaic production, leaving floors that still speak centuries later.
         </p>
 
-        <div style={introOrnament} aria-hidden="true">
+        <div style={introOrnament} className="history-intro-ornament" aria-hidden="true">
           <span />
           <span />
           <span />
         </div>
       </section>
 
-      <section style={historySection}>
-        <div style={sectionHeader}>
+      <section style={historySection} className="history-section">
+        <div style={sectionHeader} className="history-section-header">
           <div>
             <p style={sectionEyebrow}>THE ART FORM</p>
-            <h2 style={sectionTitle}>From small stones to living history.</h2>
+            <h2 style={sectionTitle} className="history-section-title">From small stones to living history.</h2>
             <p style={sectionText}>
               Mosaic is built from small pieces — tesserae — arranged into
               images, patterns, inscriptions, and borders. Across ancient
@@ -104,119 +104,119 @@ export default function History() {
             </p>
           </div>
 
-          <div style={sectionEmblem} aria-hidden="true">
+          <div style={sectionEmblem} className="history-section-emblem" aria-hidden="true">
             <div style={emblemDiamondLarge}>
               <div style={emblemDiamondSmall}>✦</div>
             </div>
           </div>
         </div>
 
-        <div style={storyGrid}>
-          <article style={storyCard}>
+        <div style={storyGrid} className="history-story-grid">
+          <article style={storyCard} className="history-story-card">
             <div style={cardCorner} aria-hidden="true"><span /><span /></div>
             <span style={cardNumber}>01</span>
             <p style={cardEyebrow}>BEFORE ROME</p>
-            <h3 style={cardTitle}>A Mediterranean language</h3>
-            <div style={cardImageWrapper}>
+            <h3 style={cardTitle} className="history-card-title">A Mediterranean language</h3>
+            <div style={cardImageWrapper} className="history-card-image-wrapper">
               <img src={goodEvilCarriage} alt="Mediterranean cultural scene" style={cardImage} />
             </div>
-            <p style={cardText}>
+            <p style={cardText} className="history-card-text">
               Mosaic developed through long Mediterranean traditions, with
               North Africa connected to Punic, Greek, and Hellenistic artistic
               worlds. These earlier cultures helped create the visual
               environment in which Roman mosaic later flourished.
             </p>
-            <div style={mosaicStrip} aria-hidden="true">
+            <div style={mosaicStrip} className="history-mosaic-strip" aria-hidden="true">
               {Array.from({ length: 12 }, (_, i) => <span key={i} />)}
             </div>
           </article>
 
-          <article style={storyCard}>
+          <article style={storyCard} className="history-story-card">
             <div style={cardCorner} aria-hidden="true"><span /><span /></div>
             <span style={cardNumber}>02</span>
             <p style={cardEyebrow}>THE ROMAN EMPIRE</p>
-            <h3 style={cardTitle}>Roman Africa in colour</h3>
-            <div style={cardImageWrapper}>
+            <h3 style={cardTitle} className="history-card-title">Roman Africa in colour</h3>
+            <div style={cardImageWrapper} className="history-card-image-wrapper">
               <img src={kidTiger} alt="Animal and hunting imagery from Roman mosaics" style={cardImage} />
             </div>
-            <p style={cardText}>
+            <p style={cardText} className="history-card-text">
               When Rome established its power in North Africa, mosaic became
               part of the visual culture of prosperous cities and private
               houses. Tunisia — ancient Africa Proconsularis — became
               especially rich in floors decorated with geometric patterns,
               plants, animals, mythology, and scenes of everyday life.
             </p>
-            <div style={mosaicStrip} aria-hidden="true">
+            <div style={mosaicStrip} className="history-mosaic-strip" aria-hidden="true">
               {Array.from({ length: 12 }, (_, i) => <span key={i} />)}
             </div>
           </article>
 
-          <article style={storyCard}>
+          <article style={storyCard} className="history-story-card">
             <div style={cardCorner} aria-hidden="true"><span /><span /></div>
             <span style={cardNumber}>03</span>
             <p style={cardEyebrow}>THE TUNISIAN LANDSCAPE</p>
-            <h3 style={cardTitle}>Carthage, Dougga, El Jem</h3>
-            <div style={cardImageWrapper}>
+            <h3 style={cardTitle} className="history-card-title">Carthage, Dougga, El Jem</h3>
+            <div style={cardImageWrapper} className="history-card-image-wrapper">
               <img src={fishSea} alt="Marine life imagery from Tunisian heritage" style={cardImage} />
             </div>
-            <p style={cardText}>
+            <p style={cardText} className="history-card-text">
               The archaeological record connects mosaic with many Tunisian
               sites. Carthage, Dougga, and El Jem belong to a landscape where
               Roman architecture, local traditions, trade, and agricultural
               prosperity shaped the visual arts.
             </p>
-            <div style={mosaicStrip} aria-hidden="true">
+            <div style={mosaicStrip} className="history-mosaic-strip" aria-hidden="true">
               {Array.from({ length: 12 }, (_, i) => <span key={i} />)}
             </div>
           </article>
 
-          <article style={storyCard}>
+          <article style={storyCard} className="history-story-card">
             <div style={cardCorner} aria-hidden="true"><span /><span /></div>
             <span style={cardNumber}>04</span>
             <p style={cardEyebrow}>LATE ANTIQUITY</p>
-            <h3 style={cardTitle}>A tradition that continued</h3>
-            <div style={cardImageWrapper}>
+            <h3 style={cardTitle} className="history-card-title">A tradition that continued</h3>
+            <div style={cardImageWrapper} className="history-card-image-wrapper">
               <img src={womanCastle} alt="Architectural and cultural continuity" style={cardImage} />
             </div>
-            <p style={cardText}>
+            <p style={cardText} className="history-card-text">
               The story did not end with Roman rule. Tunisian cities continued
               to experience cultural change under Byzantine rule, while older
               artistic traditions remained part of the region's material
               heritage.
             </p>
-            <div style={mosaicStrip} aria-hidden="true">
+            <div style={mosaicStrip} className="history-mosaic-strip" aria-hidden="true">
               {Array.from({ length: 12 }, (_, i) => <span key={i} />)}
             </div>
           </article>
         </div>
       </section>
 
-      <section style={featureSection}>
-        <div style={featureVisual} aria-hidden="true">
-          <div style={featureHalo} />
+      <section style={featureSection} className="history-feature-section">
+        <div style={featureVisual} className="history-feature-visual" aria-hidden="true">
+          <div style={featureHalo} className="history-feature-halo" />
           <div style={featureLabel}>TESSERAE / 01</div>
-          <div style={featurePattern}>
+          <div style={featurePattern} className="history-feature-pattern">
             {Array.from({ length: 49 }, (_, i) => (
               <span key={i} style={{ opacity: i % 7 === 0 ? 0.95 : i % 3 === 0 ? 0.58 : 0.24 }} />
             ))}
           </div>
         </div>
 
-        <div style={featureContent}>
+        <div style={featureContent} className="history-feature-content">
           <p style={sectionEyebrow}>WHY TUNISIA MATTERS</p>
-          <h2 style={featureTitle}>
+          <h2 style={featureTitle} className="history-feature-title">
             A mosaic is a document
             <br />
             <em>as much as it is an image.</em>
           </h2>
-          <p style={featureText}>
+          <p style={featureText} className="history-feature-text">
             The subjects preserved in Tunisian mosaics reveal what ancient
             communities valued and imagined. Mythological scenes sit beside
             domestic interiors, hunting imagery, marine life, vegetation, and
             geometric ornament. The floor becomes a meeting point between
             art, architecture, economy, religion, and daily life.
           </p>
-          <p style={featureText}>
+          <p style={featureText} className="history-feature-text">
             Sites such as Dougga are especially important because the ancient
             city preserves the interaction of indigenous Numidian, Punic,
             Hellenistic, and Roman cultures. This layered history is central
@@ -226,19 +226,19 @@ export default function History() {
         </div>
       </section>
 
-      <section style={legacySection}>
+      <section style={legacySection} className="history-legacy-section">
         <div style={legacyRule} aria-hidden="true" />
-        <div style={legacyFrame}>
+        <div style={legacyFrame} className="history-legacy-frame">
           <div>
             <span style={closingSmall}>A CONTINUING STORY</span>
-            <h2 style={closingTitle}>
+            <h2 style={closingTitle} className="history-closing-title">
               The tesserae remain.
               <br />
               <em>The story continues.</em>
             </h2>
           </div>
 
-          <p style={closingText}>
+          <p style={closingText} className="history-closing-text">
             Today, Tunisia's ancient mosaics remain among the clearest
             witnesses to the richness of its archaeological heritage. Their
             colours may be centuries old, but their subjects still offer a
@@ -246,7 +246,7 @@ export default function History() {
             walked across them.
           </p>
 
-          <div style={closingMark} aria-hidden="true">
+          <div style={closingMark} className="history-closing-mark" aria-hidden="true">
             {Array.from({ length: 5 }, (_, i) => (
               <span key={i} style={closingMarkTile} />
             ))}
@@ -259,11 +259,249 @@ export default function History() {
 }
 
 const responsiveStyles = `
+  /* Desktop styles remain unchanged. These rules only activate below 900px. */
   @media (max-width: 900px) {
-    .history-story-grid { grid-template-columns: 1fr !important; }
+    .history-story-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .history-feature-section {
+      grid-template-columns: 1fr !important;
+    }
+
+    .history-legacy-frame {
+      grid-template-columns: 1fr !important;
+    }
   }
+
   @media (max-width: 720px) {
-    .history-hero-frame { inset: 1rem !important; }
+    .history-hero-frame {
+      inset: 1rem !important;
+    }
+
+    .history-hero-section {
+      min-height: auto !important;
+      padding: 5rem 1.25rem 4rem !important;
+    }
+
+    .history-hero-content {
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    .history-hero-kicker-row {
+      flex-wrap: wrap !important;
+      gap: 0.55rem !important;
+      margin-bottom: 1.1rem !important;
+    }
+
+    .history-hero-kicker-line {
+      width: 32px !important;
+    }
+
+    .history-hero-title {
+      font-size: clamp(2.65rem, 13vw, 4.5rem) !important;
+      line-height: 0.98 !important;
+      letter-spacing: -0.045em !important;
+    }
+
+    .history-hero-description {
+      font-size: 0.98rem !important;
+      line-height: 1.72 !important;
+      margin: 1.25rem 0 1.5rem !important;
+      max-width: 100% !important;
+    }
+
+    .history-hero-signature {
+      flex-wrap: wrap !important;
+      gap: 0.5rem !important;
+      margin-top: 1.6rem !important;
+      font-size: 0.55rem !important;
+      letter-spacing: 0.14em !important;
+    }
+
+    .history-hero-mosaic {
+      width: 300px !important;
+      height: 300px !important;
+      right: -115px !important;
+      top: 5% !important;
+      opacity: 0.45 !important;
+    }
+
+    .history-hero-medallion {
+      width: 88px !important;
+      height: 88px !important;
+      right: 7% !important;
+      bottom: 5% !important;
+      font-size: 0.45rem !important;
+    }
+
+    .history-hero-side-note {
+      display: none !important;
+    }
+
+    .history-intro-band {
+      grid-template-columns: 1fr !important;
+      gap: 0.8rem !important;
+      padding: 2.25rem 1.25rem !important;
+    }
+
+    .history-intro-ornament {
+      display: none !important;
+    }
+
+    .history-intro-text {
+      font-size: 1rem !important;
+      line-height: 1.75 !important;
+    }
+
+    .history-section {
+      padding: 0.75rem 1.25rem 3.5rem !important;
+    }
+
+    .history-section-header {
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+      align-items: start !important;
+      padding-bottom: 1.5rem !important;
+    }
+
+    .history-section-title {
+      font-size: clamp(2rem, 10vw, 3rem) !important;
+    }
+
+    .history-section-text {
+      font-size: 0.95rem !important;
+      line-height: 1.72 !important;
+    }
+
+    .history-section-emblem {
+      width: 78px !important;
+      height: 78px !important;
+      margin: 0.25rem auto 0 !important;
+    }
+
+    .history-story-grid {
+      gap: 1rem !important;
+      margin-top: 1.6rem !important;
+    }
+
+    .history-story-card {
+      padding: 1.5rem 1.25rem 1.15rem !important;
+      min-height: 0 !important;
+    }
+
+    .history-card-title {
+      font-size: 1.4rem !important;
+    }
+
+    .history-card-image-wrapper {
+      height: clamp(170px, 52vw, 230px) !important;
+      margin: 0.9rem 0 1rem !important;
+    }
+
+    .history-card-text {
+      font-size: 0.93rem !important;
+      line-height: 1.72 !important;
+    }
+
+    .history-mosaic-strip {
+      margin-top: 1.1rem !important;
+    }
+
+    .history-feature-section {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+      padding: 2rem 1.25rem 4rem !important;
+    }
+
+    .history-feature-visual {
+      min-height: min(82vw, 380px) !important;
+    }
+
+    .history-feature-halo {
+      width: min(62vw, 250px) !important;
+      height: min(62vw, 250px) !important;
+    }
+
+    .history-feature-pattern {
+      width: min(55vw, 220px) !important;
+      height: min(55vw, 220px) !important;
+    }
+
+    .history-feature-content {
+      max-width: none !important;
+    }
+
+    .history-feature-title {
+      font-size: clamp(2rem, 9.5vw, 3.2rem) !important;
+    }
+
+    .history-feature-text {
+      font-size: 0.95rem !important;
+      line-height: 1.75 !important;
+    }
+
+    .history-legacy-section {
+      padding: 0.5rem 1.25rem 4.5rem !important;
+    }
+
+    .history-legacy-frame {
+      grid-template-columns: 1fr !important;
+      gap: 1.75rem !important;
+      padding: 2.75rem 1.35rem !important;
+    }
+
+    .history-closing-title {
+      font-size: clamp(2rem, 9vw, 3rem) !important;
+    }
+
+    .history-closing-text {
+      font-size: 0.95rem !important;
+      line-height: 1.75 !important;
+    }
+
+    .history-closing-mark {
+      max-width: 100% !important;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .history-hero-section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .history-hero-kicker-secondary {
+      font-size: 0.52rem !important;
+    }
+
+    .history-hero-mosaic {
+      width: 250px !important;
+      height: 250px !important;
+      right: -105px !important;
+    }
+
+    .history-hero-medallion {
+      width: 72px !important;
+      height: 72px !important;
+    }
+
+    .history-section,
+    .history-feature-section,
+    .history-legacy-section {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .history-story-card {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+
+    .history-legacy-frame {
+      padding: 2.25rem 1rem !important;
+    }
   }
 `;
 
