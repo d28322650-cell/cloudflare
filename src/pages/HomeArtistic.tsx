@@ -931,7 +931,7 @@ Handcrafted by master artisans.
         </section>
 
         <footer style={styles.footer} className="home-artistic-footer">
-          <span>Romanan style mosaic</span>
+          <span>Roman style mosaic</span>
           <span style={styles.footerDot}>·</span>
           <span>Heritage, composed.</span>
         </footer>
