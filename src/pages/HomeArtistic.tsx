@@ -453,10 +453,10 @@ export default function HomeArtistic() {
 
   useEffect(() => {
     try {
-      const seen = localStorage.getItem('romanaIntroSeen');
+      const seen = sessionStorage.getItem('romanaIntroSeen');
       if (!seen) setIntroOpen(true);
     } catch (e) {
-      // localStorage may be unavailable in some environments — fail silently
+      // sessionStorage may be unavailable in some environments — fail silently
       setIntroOpen(false);
     }
   }, []);
@@ -581,7 +581,7 @@ export default function HomeArtistic() {
               type="button"
               onClick={() => {
                 try {
-                  localStorage.setItem('romanaIntroSeen', 'true');
+                  sessionStorage.setItem('romanaIntroSeen', 'true');
                 } catch (e) {
                   /* ignore */
                 }
