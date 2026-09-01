@@ -1,30 +1,30 @@
-export interface ContactFormData {
+
+interface ContactEmailData {
   name: string;
   email: string;
   subject: string;
   message: string;
 }
 
-export async function sendContactEmail(data: ContactFormData): Promise<void> {
-  // Use relative path '/api/submit' instead of workers.dev
-  const response = await fetch('functions/api/submit', {
-    method: 'POST',
+const WORKER_URL = "https://react-vite.d28322650.workers.dev";
+
+export async function sendContactEmail(
+  data: ContactEmailData,
+): Promise<void> {
+  const response = await fetch(WORKER_URL, {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
   });
 
-  // Handle empty or non-JSON responses gracefully
-  const text = await response.text();
-  let result;
-  try {
-    result = text ? JSON.parse(text) : {};
-  } catch {
-    throw new Error(`Server returned status ${response.status}: ${text}`);
-  }
+  const result = await response.json().catch(() => null);
 
-  if (!response.ok) {
-    throw new Error(result.error ? JSON.stringify(result.error) : 'Failed to send message');
+  if (!response.ok || !result?.success) {
+    throw new Error(
+      result?.error || "Failed to send contact email.",
+    );
   }
 }
+

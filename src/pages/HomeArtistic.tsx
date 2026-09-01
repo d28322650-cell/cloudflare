@@ -922,7 +922,7 @@ Handcrafted by master artisans.
           <div style={styles.ctaSeal} className="home-artistic-cta-seal" aria-hidden="true">
             <div style={styles.sealOuter} className="home-artistic-seal-outer">
               <div style={styles.sealInner} className="home-artistic-seal-inner">
-                <span>ROMANIAN</span>
+                <span>ROMAN STYLE</span>
                 <strong>✦</strong>
                 <span>MOSAIC</span>
               </div>
@@ -931,7 +931,7 @@ Handcrafted by master artisans.
         </section>
 
         <footer style={styles.footer} className="home-artistic-footer">
-          <span>Romanian mosaic</span>
+          <span>Romanan style mosaic</span>
           <span style={styles.footerDot}>·</span>
           <span>Heritage, composed.</span>
         </footer>
