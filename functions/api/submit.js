@@ -68,23 +68,34 @@ export async function onRequest(context) {
       }),
     });
 
-    const resendData = await resendResponse.json();
+    let resendData;
+    const text = await resendResponse.text();
+    try {
+      resendData = text ? JSON.parse(text) : {};
+    } catch (e) {
+      resendData = { raw: text };
+    }
 
     if (!resendResponse.ok) {
-      return new Response(JSON.stringify({ error: resendData }), {
-        status: resendResponse.status,
+      console.error('Resend API error', resendResponse.status, resendData);
+      // Forward a simplified error message to the client for clarity
+      const errorMessage = (resendData && (resendData.error || resendData.message)) || 'Resend API error';
+      return new Response(JSON.stringify({ error: errorMessage }), {
+        status: resendResponse.status || 502,
         headers: corsHeaders,
       });
     }
 
+    console.log('Email sent via Resend', resendData);
     return new Response(
-      JSON.stringify({ success: true, message: "Email sent successfully!" }),
+      JSON.stringify({ success: true, message: "Email sent successfully!", details: resendData }),
       { status: 200, headers: corsHeaders }
     );
   } catch (err) {
     // Catch any unexpected JavaScript errors and return them cleanly with CORS headers
+    console.error('Submit handler error', err);
     return new Response(
-      JSON.stringify({ error: "Server error", details: err.message }),
+      JSON.stringify({ error: "Server error", details: (err && err.message) || String(err) }),
       { status: 500, headers: corsHeaders }
     );
   }

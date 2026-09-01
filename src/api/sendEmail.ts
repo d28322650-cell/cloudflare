@@ -6,7 +6,8 @@ export interface ContactFormData {
 }
 
 export async function sendContactEmail(data: ContactFormData): Promise<void> {
-  const response = await fetch('/api/submit', {
+  // Use relative path '/api/submit' instead of workers.dev
+  const response = await fetch('functions/api/submit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,9 +15,16 @@ export async function sendContactEmail(data: ContactFormData): Promise<void> {
     body: JSON.stringify(data),
   });
 
-  const result = await response.json();
+  // Handle empty or non-JSON responses gracefully
+  const text = await response.text();
+  let result;
+  try {
+    result = text ? JSON.parse(text) : {};
+  } catch {
+    throw new Error(`Server returned status ${response.status}: ${text}`);
+  }
 
   if (!response.ok) {
-    throw new Error(result.error || 'Failed to send message');
+    throw new Error(result.error ? JSON.stringify(result.error) : 'Failed to send message');
   }
 }
