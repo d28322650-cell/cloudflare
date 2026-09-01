@@ -679,7 +679,7 @@ export default function HomeArtistic() {
               style={styles.title}
               className="home-artistic-title"
             >
-            From<em style={styles.titleEmphasis}>Blockchain</em> to Timeless Stone.
+            From <em style={styles.titleEmphasis}>Blockchain</em> to Timeless Stone.
             </motion.h1>
 
             <motion.p
